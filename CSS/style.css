@@ -1,12 +1,12 @@
-body {
+.burger {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     margin: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
     font-family: "TT Lakes";
     min-width: 320px;
     max-width: 320px;
+    min-height: 1024px;
     box-shadow: 5px 0 10px  rgba(0, 0, 0, 0.3);
 }
 a,
@@ -37,8 +37,8 @@ a:focus, .lang:focus{
     transform: translateY(-5px);
 }
 /* Стилизация кнопок */
-.header__button,
-.action__button {
+.burger__button,
+.actions__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,15 +49,15 @@ a:focus, .lang:focus{
     
 }
 /* Стили шапки */
-.header {
+.burger__header {
     display: flex;
     align-items: center;
-    padding: 23px 24px;
+    padding: 24px;
 }
-.header__button:first-child{
+.burger__button:first-child{
     margin-right: 16px;
 }
-.header__button:last-child{
+.burger__button:last-child{
     margin-left: auto;
 }
 /* Стили main */
@@ -69,33 +69,23 @@ a:focus, .lang:focus{
     list-style-type: none;
     gap: 32px;
 }
-/* .nav__elem--chosen::before{
-    position: absolute;
-    left: 0;
-    content: "";
-    width: 4px;
-    height: 32px;
-    background-color: #41F6D7;
-    border-radius: 1em;
-} */
 .nav__link{
     text-decoration: none;
     color: black;
     font-weight: 600;
 }
-.main__actions{
+.burger__actions{
     padding: 0;
-    padding-left: 24px;
     display: flex;
     list-style-type: none;
     gap: 16px;
-    margin-top: 268px;
 }
 /* Стили подвала */
-.footer{
+.burger__footer{
     display: flex;
     flex-direction: column;
     padding-left: 24px;
+    margin-top: auto;
 }
 .email, 
 .number{
@@ -112,14 +102,22 @@ a:focus, .lang:focus{
     font-weight: bold;
     margin-bottom: 40px;
 }
-.footer__lang{
+.burger__lang{
     display: flex;
     list-style-type: none;
     padding: 0;
     gap: 7px;
 }
-.lang{
-    background-color: white;
-    border: none;
+.lang__name{
     font-weight: 600;
+    transition: color 5s ease-in;
 }
+.lang__radio{
+    display: none;
+}
+.lang__radio:checked ~ .lang__text {
+    position: relative;
+    top: 2px;
+    color: #7E7E82; 
+    
+  }
