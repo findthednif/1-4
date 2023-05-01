@@ -29,7 +29,7 @@ a:focus, .lang:focus{
 }
 .nav__link:focus::before{
     position: absolute;
-    left: -1px;
+    left: 0px;
     content: "";
     width: 4px;
     height: 32px;
