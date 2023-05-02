@@ -24,7 +24,7 @@ a:active{
 a:hover, button:hover{
     opacity: 0.7;
 }
-a:focus, .lang:focus{
+a:focus{
   color: #7E7E82;  
 }
 .nav__link:focus::before{
